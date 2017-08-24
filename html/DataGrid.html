@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Grid Demo</title>
+
+    <link rel="stylesheet" href="../jquery-easyui-1.5.2/themes/default/easyui.css">
+    <link rel="stylesheet" href="../jquery-easyui-1.5.2/themes/icon.css">
+    <link rel="stylesheet" href="../jquery-easyui-1.5.2/demo/demo.css">
+    <script src="../jquery-easyui-1.5.2/jquery.min.js"></script>
+    <script src="../jquery-easyui-1.5.2/jquery.easyui.min.js"></script>
+</head>
+<body>
+<div>
+    <h2>工资信息统计表</h2>
+    <p>这是一个工资信息统计表.</p>
+    <div style="margin:20px 0;"></div>
+    <div style="margin:20px 0 10px 0;"></div>
+    <div class="easyui-accordion" style="width:150px;height:250px;">
+        <div title="关于" data-options="iconCls:'icon-ok'" style="overflow:auto;padding:10px;">
+            <h3 style="color:#0099FF;">Accordion for jQuery</h3>
+            <p>这是一个easyUI的树形结构demo。</p>
+        </div>
+        <div title="帮助" data-options="iconCls:'icon-help'" style="padding:10px;">
+            <p>The accordion allows you to provide multiple panels and display one or more at a time. Each panel has
+                built-in support for expanding and collapsing. Clicking on a panel header to expand or collapse that
+                panel body. The panel content can be loaded via ajax by specifying a 'href' property. Users can define a
+                panel to be selected. If it is not specified, then the first panel is taken by default.</p>
+        </div>
+        <div title="食品分类管理" data-options="iconCls:'icon-search'" style="padding:10px;">
+            <ul class="easyui-tree">
+                <li>
+                    <span>Foods</span>
+                    <ul>
+                        <li>
+                            <span>Fruits</span>
+                            <ul>
+                                <li>apple</li>
+                                <li>orange</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span>Vegetables</span>
+                            <ul>
+                                <li>tomato</li>
+                                <li>carrot</li>
+                                <li>cabbage</li>
+                                <li>potato</li>
+                                <li>lettuce</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="easyui-table">
+        <table class="easyui-datagrid" title="工资信息统计表" style="width:700px;height:250px"
+               data-options="singleSelect:true,collapsible:true,url:'datagrid_data1.json',method:'get'">
+            <thead>
+            <tr>
+                <th data-options="field:'itemid',width:80">序号</th>
+                <th data-options="field:'productid',width:100">姓名</th>
+                <th data-options="field:'listprice',width:80,align:'right'">级别</th>
+                <th data-options="field:'unitcost',width:80,align:'right'">基本工资</th>
+                <th data-options="field:'attr1',width:250">扣除工资</th>
+                <th data-options="field:'status',width:60,align:'center'">实发工资</th>
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+
+    <div style="margin:20px 0;"></div>
+    <div class="easyui-panel">
+        <div class="easyui-pagination" data-options="total:114"></div>
+    </div>
+</div>
+</body>
+</html>

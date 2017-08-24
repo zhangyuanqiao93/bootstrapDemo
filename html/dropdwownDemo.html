@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dropdownDemo</title>
+    <!--<link rel="stylesheet" href="../bootstrap/css/bootstrap.css">-->
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="../bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="dropdown">
+<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">主题
+<span class="caret"></span>
+</button>
+    <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation" class="dropdown-header">编程语言</li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">Java</a>
+        </li>
+        <li role="presentation">
+            <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+        </li>
+        <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1">数据通信</a>
+        </li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">分离的链接编程语言</li>
+        <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1">分离的链接</a>
+        </li>
+    </ul>
+
+
+</div>
+
+
+    <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" id="dropdownMenu2"
+                data-toggle="dropdown">
+            主题
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">Java</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">数据挖掘</a>
+            </li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">数据通信/网络</a>
+            </li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation">
+                <a role="menuitem" tabindex="-1" href="#">分离的链接</a>
+            </li>
+        </ul>
+
+        <div class="btn-toolbar" role="toolbar">
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">按钮 1</button>
+                <button type="button" class="btn btn-default">按钮 2</button>
+                <button type="button" class="btn btn-default">按钮 3</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">按钮 4</button>
+                <button type="button" class="btn btn-default">按钮 5</button>
+                <button type="button" class="btn btn-default">按钮 6</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">按钮 7</button>
+                <button type="button" class="btn btn-default">按钮 8</button>
+                <button type="button" class="btn btn-default">按钮 9</button>
+            </div>
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">按钮 1</button>
+                <button type="button" class="btn btn-default">按钮 2</button>
+                <!--在group内添加group-->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        下列
+                        <span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu">
+                        <li><a href="#">下拉链接 1</a></li>
+                        <li><a href="#">下拉链接 2</a></li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+</div>
+</body>
+</html>

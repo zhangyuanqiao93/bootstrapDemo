@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AjaxDemo</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+    <script></script>
+    <script src="../bootstrap/js/bootstrap.js"></script>
+
+    <script>
+//        (function () {
+//            alert("123");
+//            var radio = $('input:radio:checked').val();
+//            console.log(radio);
+//            alert(radio);
+//        })();
+
+        /*    function loadXmlDoc() {
+         alert("123");
+         var htmlobj;
+         $(document).ready(function () {
+         $('#b1').click(function () {
+         htmlobj = $.ajax({url:"/ajax/ajax.txt"},async,false);
+         $('#myDiv').html(htmlobj.responseText);
+         });
+         });
+         }*/
+    </script>
+</head>
+<body>
+
+<!--<div id="myDiv"> <h2>Ajax修饰该文本内容</h2></div>
+<button type="button" class="" onclick="loadXmlDoc()">ajax请求</button>
+<button id="b1" class="b1" onclick="loadXmlDoc()" >按钮1</button>
+<button id="b2" class="b2">按钮2</button>
+<button id="b3" class="b3">按钮3</button>
+<button id="b4" class="b4">按钮4</button>-->
+
+<!--<input type="radio" name="性别" id="radio1" value="男" checked> 男-->
+<!--<input type="radio" name="性别" id="radio2" value="女"> 女-->
+<form id="userlist" method="post" action="option.php">
+    <input type="radio" name="userid" value="1">1
+
+    <input type="radio" name="userid" value="2">2
+
+    <input type="radio" name="userid" value="3">3
+
+</form>
+<script>
+
+    function usubmit(action){
+
+        var radionum = document.getElementById("userlist").userid;
+
+        for(var i=0;i<radionum.length;i++){
+
+            if(radionum[i].checked){
+
+                userid = radionum[i].value
+
+            }
+            console.log(radionum[i]);
+        }
+        console.log(radionum[i]);
+        window.location.href='option.php?action='+action+'&userid='+userid;
+
+    }
+
+    usubmit();
+
+</script>
+</body>
+</html>

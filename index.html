@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>现代浏览器博物馆</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel='stylesheet' href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        #code{
+
+            font-family: "Arial";
+            font-style: italic;
+            font-weight: bold;
+            border: 0;
+
+           color: blue;
+        }
+
+    </style>
+    <script src="bootstrap/js/bootstrap.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+<div class="container">
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapsed" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <a class="navbar-brand" href="#"> 现代浏览器博物馆</a>
+
+</div>
+
+    <!--缩放到固定尺寸的移动端屏幕自适应-->
+    <div class="collapsed navbar-collapsed" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">首页</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="disabled"><a href="#">业务功能</a></li>
+                    <li><a href="#">信息建立</a></li>
+                    <li><a href="#">信息查询</a></li>
+                    <li><a href="#">信息管理</a></li>
+                    <li class="divider">
+                    <!--divider 分割线-->
+
+                    <li class="disabled"><a href="#">系统设置</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="#">帮助</a></li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <form action="" method="get" class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="username">
+                <input type="password" class="form-control" placeholder="password">
+
+            </div>
+            <button type="submit" class="btn btn-default" onclick="test()">登录</button>
+
+        </form>
+
+    </div>
+</div>
+</nav>
+
+<div class="container">
+<h1>JS 随机验证码的验证</h1>
+
+<div>
+    <input type="text" id="input" value="">
+    <input type="button" id="code" value="" onclick="createCode()">
+    <input type="button" value="验证" onclick="validate()">
+</div>
+
+<!--测试1-->
+<div>
+    <h1>成都  <small> 成都 </small></h1>
+    <h2>成都</h2>
+    <h3>成都</h3>
+    <h4>成都</h4>
+    <h5>成都</h5>
+    <p class="lead">我是一个深航学子。</p>
+
+    <!--强调-->
+    <strong>中国梦，我的梦</strong>
+    <small>中国梦，我的梦</small>
+    <em>中国梦，我的梦</em>
+
+    <p class="text-left">中国梦，我的梦</p>
+    <p class="text-right">中国梦，我的梦</p>
+    <p class="text-center">中国梦，我的梦</p>
+    <!--//文本行减弱-->
+    <p class="text-muted">中国梦，我的梦</p>
+    <p class="text-primary">中国梦，我的梦</p>
+    <p class="text-success">中国梦，我的梦</p>
+    <p class="text-info">中国梦，我的梦</p>
+    <p class="text-warning">中国梦，我的梦</p>
+    <p class="text-danger">中国梦，我的梦</p>
+</div>
+
+
+<!--abbr:abbreviation 缩写-->
+
+<abbr title="World Wide Web">www</abbr>
+<abbr title="www.baidu.com" class="initialism">RSS</abbr>
+
+
+<!--Address-->
+<address>
+    <strong>TK Company, Inc.</strong>
+    <br>007 Street <br>
+    <abbr title="Telephone">Telephone: </abbr>(123) 456-789
+
+</address>
+<address>
+    <strong>成都瞳康科技有限公司</strong><br>
+    <a href="mailto:#">mailto@somedomain.com</a>
+</address>
+
+<!--blockquote-->
+<blockquote>
+    <p> 这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例。
+        这是一个默认的引用实例。这是一个默认的引用实例。这是一个默认的引用实例.
+    </p>
+</blockquote>
+
+<blockquote>
+
+    这是一个带有源标题的引用。
+    <small>
+        Some Famous in <cite title="Source Title">  Source Title</cite>
+    </small>
+</blockquote>
+
+<blockquote class="pull-right">
+    向右对齐的引用
+</blockquote>
+
+
+<!--序列-->
+<h4>有序序列</h4>
+<ol class="list-inline">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ol>
+
+<h4>无需列表</h4>
+<!--list-sunstyled:去掉着重号-->
+<ul class=" ">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<h4>自定义列表</h4>
+<dl>
+    <dt>Description</dt>
+    <dd>Item 1</dd>
+    <dt>Description </dt>
+    <dd>Item 2</dd>
+</dl>
+
+<h4>水平的定义列表</h4>
+
+<dl class="dl-horizontal">
+    <dt>Description</dt>
+    <dd>Item1</dd>
+    <dt>Description</dt>
+    <dd>Item2</dd>
+</dl>
+
+
+<!--code-->
+<div>
+<p>  <code> &lt;header &gt;</code></p>
+    <pre>
+        &lt;article&gt;
+        &lt;h1&gt;Article Heading&lt;/h1&gt;
+        &lt;/article&gt;
+    </pre>
+
+    <p> 使用<kbd>ctrl + p</kbd>来打开新窗口</p>
+
+    <p><samp>This text is output from a computer program....</samp></p>
+
+    <!--Bootstrap 表格 table-striped, bordered-->
+
+    <table class="table table-bordered table-hover table-condensed">
+        <caption>
+            基本的表格布局
+        </caption>
+        <!--表格头部-->
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>城市</th>
+        </tr>
+        </thead>
+
+        <!--表格的Body部分-->
+        <tbody>
+            <tr class="active">
+                <td>易燃易爆物品</td>
+                <td>待发货</td>
+            </tr>
+            <tr class="success">
+                <td>易燃易爆物品</td>
+                <td>已经发货</td>
+            </tr>
+            <tr class="warning">
+                <td>易燃易爆物品</td>
+                <td>代收货</td>
+            </tr>
+            <tr class="danger">
+                <td>易燃易爆物品</td>
+                <td>退货</td>
+            </tr>
+            <tr>
+                <td>Bridge</td>
+                <td>Chengdu</td>
+            </tr>
+        <tr>
+            <td>Mr.</td>
+            <td>Luzhou</td>
+        </tr>
+            <tr>
+                <td>Bridge</td>
+                <td>Chengdu</td>
+            </tr>
+            <tr>
+                <td>Bridge</td>
+                <td>Chengdu</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <caption>
+                响应格式布局
+            </caption>
+            <thead>
+                <tr>
+                    <th>产品</th>
+                    <th>付款日期</th>
+                    <th>付款状态</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td>A</td>
+                    <td>2017/03/05</td>
+                    <td>未付款</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>2017/03/06</td>
+                    <td>未付款</td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>2017/03/07</td>
+                    <td>未付款</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--表单-->
+
+
+    <!--如果需要创建一个表单，它的所有元素是内联的，向左对齐的，
+    标签是并排的，请向 <form> 标签添加 class .form-inline-->
+    <form  class="form-inline" role="form">
+        <div class="form-group">
+            <label class="sr-only" for="name"></label>
+            <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+
+        </div>
+
+        <div class="form=group">
+            <label class="sr-only" for="inputfile">选择文件</label>
+            <input type="file" id="inputfile" class="">
+            <p class="help-block">这里是帮助模块</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox">请打勾
+            </label>
+        </div>
+
+        <button class="btn btn-default" type="submit">提交</button>
+
+    </form>
+
+    <!--水平表单 Go On(Bootstrap 表单)-->
+
+    <form action="" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="first_name" class="col-sm-2 control-label">名字</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="first_name" placeholder="请输入名字">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name" class="col-sm-2 control-label">姓</label>
+            <div class="col-sm-10 ">
+                <input type="text" class="form-control" id="last_name" placeholder="请输入名字">
+            </div>
+
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">记住我
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class=" col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </div>
+    </form>
+
+
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="firstname" class="col-sm-2 control-label">名字</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="firstname" placeholder="请输入名字">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname" class="col-sm-2 control-label">姓</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="lastname" placeholder="请输入姓">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">请记住我
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </div>
+    </form>
+    <!--Bootstrap 支持最常见的表单控件，主要是 input、textarea、checkbox、radio 和 select。-->
+    <form action="" class="" role="form">
+        <div class="form-group">
+            <label for="name">标签</label>
+            <input type="text" class="form-control" placeholder="文本输入">
+        </div>
+    </form>
+    <form action="" class="" role="form">
+        <div class="form-group">
+            <label for="name">标签</label>
+            <textarea class="form-control" rows="3" placeholder="文本输入"></textarea>
+        </div>
+    </form>
+
+    <!--复选框（Checkbox）和单选框（Radio）-->
+    <label for="name">单选框复选框</label>
+   <div class="checkbox">
+       <label>
+           <input type="checkbox" value="">选项1
+       </label>
+   </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="">选项2
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="">选项3
+        </label>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" value="">选项4
+        </label>
+    </div>
+
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" value="option1" id="optionsRadio1" checked>
+            选项一
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" value="option2" id="optionsRadio2">
+            选项二---- 选择它将会取消选择选项 1
+        </label>
+    </div>
+
+    <!--官网代码-->
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>选项 1
+        </label>
+    </div>
+    <div class="radio">
+        <label>
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">选项 2 - 选择它将会取消选择选项 1
+        </label>
+    </div>
+
+    <label for="name">内联复选框和单选按钮的实例</label>
+    <div class="">
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1">苹果
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2">香蕉
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox3" value="option3">草莓
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios01" value="option1" checked>
+            A
+        </label>
+
+        <label class="checkbox-inline">
+            <!--type name id value-->
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios02" value="option2">
+            B
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios3" value="option1">选项 1
+        </label>
+        <label class="checkbox-inline">
+            <input type="radio" name="optionsRadiosinline" id="optionsRadios4" value="option2">选项 2
+        </label>
+    </div>
+
+    <!--select选择器-->
+
+    <form  role="form">
+        <div class="form-group">
+            <label for="name">选项列表
+                <select class="form-control">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                </select>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="name">选项列表
+                <select multiple class="form-control">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                </select>
+            </label>
+        </div>
+    </form>
+
+    <!--静态控件：在一个水平表单内的表单标签后放置纯文本时，请在 <p> 上使用 class .form-control-static。-->
+
+    <form class="form-horizontal" action="" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 label-control" for="name">E-mail</label>
+            <div class="col-sm-10">
+                <p class="form-control-static">example@mail.com</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 label-control" for="inputPwd">密码</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="" id="inputpwd" placeholder="请输入密码">
+            </div>
+        </div>
+
+    </form>
+
+    <form action="" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">聚焦</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="focusedInput" type="text" value="该输入框获得焦点...">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputpwd" class="col-sm-2 control-label">禁用</label>
+            <div class="col-sm-10">
+                <input class="form-control" id="disabledInput" type="text" placeholder="该输入框禁止输入..." disabled>
+            </div>
+        </div>
+
+        <fieldset disabled>
+            <div class="form-group">
+                <label for="disabledTextInput" class="col-sm-2 control-label">禁用输入</label>
+                <div class="col-sm-10">
+                    <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="disabledSelect" class="col-sm-2 control-label">禁用选择菜单</label>
+                <div class="col-sm-10">
+                    <select id="disabledSelect" class="form-control">
+                        <option>禁止选择</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group has-warning">
+            <label for="inputWarning1" class="col-sm-2 control-label">输入警告</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputWarning1" placeholder="请输入警告">
+            </div>
+        </div>
+
+        <div class="form-group has-success">
+            <label class="col-sm-2 control-label" for="inputSuccess">输入成功</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputSuccess" placeholder="请输入成功信息">
+            </div>
+        </div>
+
+        <div class="form-group has-error">
+            <label class="col-sm-2 control-label" for="inputError">输入错误</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="inputError" placeholder="请输入错误信息">
+            </div>
+        </div>
+
+    </form>
+
+    <!--class .input-lg 和 .col-lg-* 来设置表单的高度和宽度-->
+    <!--表单控件大小Go On-->
+    <form role="form">
+        <div class="form-group">
+            <input class="form-control input-lg" type="text" placeholder=".input-lg">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" placeholder="默认输入">
+        </div>
+        <div class="form-group">
+            <input class="form-control input-sm" type="text" placeholder=".input-sm">
+        </div>
+        <div class="form-group"></div>
+        <div class="form-group">
+            <select class="form-control input-lg">
+                <option value="">.input-lg</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control">
+                <option value="">默认选择</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control input-sm">
+                <option value="">.input-sm</option>
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-lg-2">
+                <input type="text" class="form-control" placeholder=".col-lg-2">
+            </div>
+            <div class="col-lg-3">
+                <input type="text" class="form-control" placeholder=".col-lg-3">
+            </div>
+            <div class="col-lg-4">
+                <input type="text" class="form-control" placeholder=".col-lg-4">
+            </div>
+        </div>
+    </form>
+<!--表单帮助文本-->
+    <form role="form">
+        <span>帮助文本实例</span>
+        <input class="form-control" type="text" placeholder="">
+        <span class="help-block">一个较长的帮助文本块，超过一行，
+  需要扩展到下一行。本实例中的帮助文本总共有两行。</span>
+    </form>
+
+
+    <!--Button-->
+
+    <button type="button" class="btn btn-default">默认按钮</button>
+    <button type="button" class="btn btn-primary">原始按钮</button>
+    <button type="button" class="btn btn-success">成功按钮</button>
+    <button type="button" class="btn btn-warning">警告按钮</button>
+    <button type="button" class="btn btn-info">信息按钮</button>
+    <button type="button" class="btn btn-danger">危险按钮</button>
+    <button type="button" class="btn btn-link">链接按钮</button>
+
+
+    <button type="button" class="btn btn-default btn-lg">默认按钮</button>
+    <button type="button" class="btn btn-primary btn-sm">原始按钮</button>
+    <button type="button" class="btn btn-success btn-xs">成功按钮</button>
+    <button type="button" class="btn btn-warning">警告按钮</button>
+    <button type="button" class="btn btn-info">信息按钮</button>
+    <button type="button" class="btn btn-danger">危险按钮</button>
+    <button type="button" class="btn btn-link">链接按钮</button>
+
+    <p>
+        <button type="button" class="btn btn-primary btn-lg btn-block">块级的原始按钮</button>
+        <button type="button" class="btn btn-default btn-lg btn-block">块级的按钮</button>
+    </p>
+
+    <p>
+        <button type="button" class="bnt btn-default btn-lg">默认按钮</button>
+        <button type="button" class="btn btn-default btn-sm active">被激活的默认按钮</button>
+    </p>
+
+
+    <p>
+        <button type="button" class="btn btn-primary btn-lg">原始按钮</button>
+        <button type="button" class="btn btn-primary btn-sm active">被激活的原始按钮</button>
+    </p>
+
+    <p>
+        <button type="button" class="btn btn-success btn-lg">成功按钮</button>
+        <button type="button" class="btn btn-success btn-lg" disabled="disabled">被禁用的成功按钮</button>
+    </p>
+
+    <p>
+        <a href="javascript:;" class="btn btn-default btn-lg" role="button">链接</a>
+        <a href="javascript:;" class="btn btn-default btn-lg disabled" role="button">链接</a>
+    </p>
+
+<!--可以在 <a>、<button> 或 <input> 元素上使用按钮 class。
+但是建议您在 <button> 元素上使用按钮 class，避免跨浏览器的不一致性问题-->
+    <a class="btn btn-default" href="#" role="button">链接</a>
+    <button class="btn btn-default" type="submit">按钮</button>
+    <input class="btn btn-default" type="button" value="输入">
+    <input class="btn btn-default" type="submit" value="提交">
+
+
+    <!--Bootstrap 图片-->
+    <!--
+    .img-rounded：添加 border-radius:6px 来获得图片圆角。
+    .img-circle：添加 border-radius:50% 来让整个图片变成圆形。
+    .img-thumbnail：添加一些内边距（padding）和一个灰色的边框。
+    -->
+    <div>
+        <img src="images/1.jpg" class="img-rounded">
+        <img src="images/1.jpg" class="img-circle">
+        <img src="images/1.jpg" class="img-thumbnail">
+    </div>
+
+    <div>
+        <!--为图片添加圆角 (IE8 不支持)-->
+        <img src="images/1.jpg" alt="" class="img-rounded">
+        <!--将图片变为圆形 (IE8 不支持)-->
+        <img src="images/1.jpg" alt="" class="img-circle">
+        <!--缩略图功能-->
+        <img src="images/1.jpg" alt="" class="img-thumbnail">
+        <!--图片响应式 (将很好地扩展到父元素)-->
+        <img src="images/1.jpg" alt="" class="img-response">
+    </div>
+
+    <!--bootstrap辅助类-->
+
+    <div>
+        <!--给你超链接添加class：text-muted-->
+        <h2>文本</h2>
+        <p class="text-muted">该段落使用了样式 "text-muted"。</p>
+        <a class="text-muted" href="http://www.w3cschool.cc">链接使用了样式 "text-muted"。</a>
+        <a class="text-success" href="http://www.baidu.com">百度</a>
+        <a class="text-primary" href="http://www.baidu.com">百度</a>
+        <a class="text-info" href="http://www.baidu.com">百度</a>
+        <a class="text-danger" href="http://www.baidu.com">百度</a>
+        <a class="text-warning" href="http://www.baidu.com">百度</a>
+    </div>
+
+    <div>
+        <p class="bg-primary">这个一个背景</p>
+        <p class="bg-primary">这个一个背景</p>
+        <p class="bg-primary">这个一个背景</p>
+        <p class="bg-primary">这个一个背景</p>
+        <a href="#" class="bg-primary">这也是一个背景</a>
+        <a href="#" class="bg-success">这也是一个背景</a>
+        <a href="#" class="bg-info">这也是一个背景</a>
+        <a href="#" class="bg-warning">这也是一个背景</a>
+        <a href="#" class="bg-danger">这也是一个背景</a>
+
+        <p class="pull-right">眼镜蛇的崛起背景</p>
+        <a class="pull-right">眼镜蛇的崛起背景</a>
+        <a href="#" class="pull-left">变形金刚</a>
+
+        <a href="#" class="center-block">居中</a>
+        <div class="center-block"  style="width:150px;background-color:#ccc;">
+            该 div 显示在中间
+        </div>
+
+        <p class="show">该段落强制显示</p>
+        <p class="hidden">该段落强制隐藏</p>
+        <div>
+            <p> .sr-only 类除了屏幕阅读器外，其他设备上都隐藏元素:</p>
+            <a class="sr-only" href="#">跳转到主要内容</a>
+        </div>
+        <p>
+            .text-hide 类将页面元素所包含的文本内容替换为背景图:
+        </p>
+        <div class="text-hide">
+            在 div 元素中插入一些文本
+        </div>
+        <div class="container">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu
+                    <span class="caret"></span>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">C#</a></li>
+                        <li><a href="#">Python</a></li>
+                    </ul>
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script>
+
+    var  test = function () {
+//        alert("!!!");
+    };
+
+    var code; //设一个全局变量用于保存验证码
+    var createCode = function () {
+//        alert("123");
+        code = '';//初始化验证码
+        var codeV = document.getElementById('code');
+        var codeLength = 4;//验证码长度
+
+        //设置随机字符
+        var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R', 'S','T','U','V','W','X','Y','Z');
+        //循环codeLength 我设置的4就是循环4次
+        for (var i =0; i<codeLength;i++){
+            var index = Math.floor(Math.random()*36); //设置随机数范围,这设置为0 ~ 36
+            code+= random[index]; //字符串拼接 将每次随机的字符 进行拼接
+
+        }
+            //将拼接好的字符串赋值给展示的Value
+            codeV.value = code
+    };
+    
+    var validate = function () {
+//        alert("1212");
+        var oValue = document.getElementById('input').value.toUpperCase();
+        if (oValue==0){
+            alert("请输入验证码！");
+        }else if (oValue!=code){
+                alert("验证码不正确，请重新输入！");
+                oValue = ' ';
+                createCode();
+            }else{
+            window.open('http://www.baidu.com','_self');
+            }
+        };
+    //设置此处的原因是每次进入界面展示一个随机的验证码，不设置则为空
+    window.onload = function (){
+
+        createCode();
+    }
+</script>
+
+</div>
+</body>
+</html>
